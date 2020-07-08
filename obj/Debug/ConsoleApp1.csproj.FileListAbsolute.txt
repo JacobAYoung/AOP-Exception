@@ -1,9 +1,0 @@
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\bin\Debug\ConsoleApp1.exe.config
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\bin\Debug\ConsoleApp1.exe
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\bin\Debug\ConsoleApp1.pdb
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\bin\Debug\Castle.Core.dll
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\obj\Debug\ConsoleApp1.csproj.CopyComplete
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\obj\Debug\ConsoleApp1.exe
-C:\Users\yjake\OneDrive\Documents\GitHub\AOP-Exception\obj\Debug\ConsoleApp1.pdb
