@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "rKAqzp5fFQRn6A2unvOYg/oiClMOQiRBQXMbk2U4tUjtt3pVJNctsXnaRjxmS6Srz6QmAs7MIldSakIw+Fiepw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\yjake\\OneDrive\\Documents\\GitHub\\AOP-Exception\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\yjake\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512"
+  ],
+  "logs": []
+}
