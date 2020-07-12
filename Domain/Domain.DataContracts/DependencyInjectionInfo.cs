@@ -1,8 +1,8 @@
-﻿using Domain;
+﻿using Domain.Sharp;
 using System;
 using System.Collections.Generic;
 
-namespace DataContracts
+namespace Domain.DataContracts
 {
     public class DependencyInjectionInfo
     {

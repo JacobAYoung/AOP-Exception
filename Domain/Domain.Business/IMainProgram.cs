@@ -1,4 +1,4 @@
-﻿namespace Business
+﻿namespace Domain.Business
 {
     public interface IMainProgram
     {

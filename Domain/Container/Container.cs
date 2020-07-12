@@ -1,7 +1,7 @@
-﻿using Business;
-using Castle.DynamicProxy;
-using DataContracts;
-using Domain;
+﻿using Castle.DynamicProxy;
+using Domain.Business;
+using Domain.DataContracts;
+using Domain.Sharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;

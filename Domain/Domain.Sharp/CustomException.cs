@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Domain
+namespace Domain.Sharp
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class CustomException : Attribute

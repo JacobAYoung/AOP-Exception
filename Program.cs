@@ -1,6 +1,6 @@
-﻿using Business;
+﻿using System;
+using Domain.Business;
 using Domain.Container;
-using System;
 
 namespace ConsoleApp1
 {

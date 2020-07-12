@@ -1,7 +1,7 @@
-﻿using Domain;
+﻿using Domain.Sharp;
 using System;
 
-namespace Business
+namespace Domain.Business
 {
     public class MainProgram : IMainProgram
     {
