@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain.DataContracts", "Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataContracts", "DataContracts\DataContracts.csproj", "{F2F2E79E-63B9-41FB-A7D7-1680B228931D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{4C523CCD-1FAF-4EF0-84C2-CB69D5B7B255}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4C523CCD-1FAF-4EF0-84C2-CB69D5B7B255}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
