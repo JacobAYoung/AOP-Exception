@@ -1,15 +1,13 @@
 ﻿using Business;
 using Castle.DynamicProxy;
-using Core;
 using DataContracts;
+using Domain;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core.Container
+namespace Domain.Container
 {
     public class Container
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Core
+namespace Domain
 {
     [AttributeUsage(AttributeTargets.Method)]
     public class CustomException : Attribute

@@ -54,9 +54,9 @@
       <Project>{5fdf8c5e-9d5c-400f-b824-61d772350c0d}</Project>
       <Name>Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Core\Core.csproj">
+    <ProjectReference Include="..\Core\Domain.csproj">
       <Project>{f280784c-5bed-4c1e-bebc-e74d0ef94b29}</Project>
-      <Name>Core</Name>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\DataContracts\DataContracts.csproj">
       <Project>{f2f2e79e-63b9-41fb-a7d7-1680b228931d}</Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Castle.DynamicProxy;
 
-namespace Core
+namespace Domain
 {
     public class ExceptionIntercept : IInterceptor
     {
