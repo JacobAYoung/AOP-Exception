@@ -11,7 +11,6 @@ namespace ConsoleApp1
     {
         public CustomException()
         {
-            Console.WriteLine("Log custom message");
         }
     }
 }

@@ -14,7 +14,6 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             var container = new Container(new MainProgram());
-            //mainProgram.TestProgram();
             Console.ReadLine();
         }
     }
@@ -29,12 +28,6 @@ namespace ConsoleApp1
 
     public class MainProgram : IMainProgram
     {
-        private Container container;
-        public MainProgram()
-        {
-            //container = new Container(this);
-        }
-
         public void TestProgram()
         {
             RunCode(1);
@@ -64,14 +57,7 @@ namespace ConsoleApp1
 
         private void TestLocator(IMainProgram main)
         {
-            try
-            {
-                main.RunCode(1);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception {ex.Message}");
-            }
+            main.RunCode(1);
         }
 
         public IEnumerable<DependencyInjectionInfo> ExtractDependencyInectionInfo(object objectWithDependencies)
