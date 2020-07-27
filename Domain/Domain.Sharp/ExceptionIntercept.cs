@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
+using System.Security.Cryptography.X509Certificates;
 using Castle.DynamicProxy;
 
 namespace Domain.Sharp
@@ -7,7 +10,8 @@ namespace Domain.Sharp
     {
         public void Intercept(IInvocation invocation)
         {
-            if (invocation.Method.IsDefined(typeof(CustomException), false))
+            var test = invocation.MethodInvocationTarget.GetCustomAttribute(typeof(CustomException));
+            if (test != null)
             {
                 try
                 {

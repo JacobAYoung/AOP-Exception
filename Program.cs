@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Linq;
 using Castle.DynamicProxy;
 using Domain.Business;
-using Domain.Container;
+using Domain.Sharp;
 
 namespace ConsoleApp1
 {
@@ -10,23 +9,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            
-            try
-            {
-                var container = new Container(new MainProgram());
 
-                var containerProxyObject = (IProxyTargetAccessor)container.ProxyObject;
-                var proxyTarget = containerProxyObject.DynProxyGetTarget();
-                var mainProgram = (IMainProgram)proxyTarget;
-                mainProgram.RunCode();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            //Ideally run code like this.
-            //container.ProxyObject.RunCode();
+            //try
+            //{
+            //var container = new Container(new MainProgram());
+
+            //var containerProxyObject = (IProxyTargetAccessor)container.ProxyObject;
+            //var proxyTarget = containerProxyObject.DynProxyGetTarget();
+            //var mainProgram = (IMainProgram)proxyTarget;
+            //mainProgram.RunCode();
+
+            var personClass = new MainProgram();
+            var proxy2 = new ProxyCreator<IMainProgram>();
+            var createdProxy = proxy2.GetProxyObject(personClass);
+            createdProxy.RunCode();
+
             Console.ReadLine();
+        }
+    }
+
+    public class ProxyCreator<T>
+    {
+        public T GetProxyObject(object concreteClass)
+        {
+            var proxy = new ProxyGenerator();
+            return (T)proxy.CreateInterfaceProxyWithTarget(typeof(T), concreteClass, new ExceptionIntercept());
         }
     }
 }
