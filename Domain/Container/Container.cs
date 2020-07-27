@@ -11,26 +11,28 @@ namespace Domain.Container
 {
     public class Container
     {
-        public Container(Object objectName)
+
+        public object ProxyObject { get; private set; }
+
+        public Container(object objectName)
         {
             var test = ExtractDependencyInectionInfo(objectName);
-            Locator();
         }
 
-        private void Locator()
+        private void Locator(Type interfaceClass, object concreteClass, string methodName)
         {
-            var pg = new ProxyGenerator();
-            TestLocator(pg.CreateInterfaceProxyWithTarget<IMainProgram>(new MainProgram(), new ExceptionIntercept()));
-        }
-
-        private void TestLocator(IMainProgram main)
-        {
-            main.RunCode(1);
+            var proxyGenerator = new ProxyGenerator();
+            var proxyResult = proxyGenerator.CreateInterfaceProxyWithTargetInterface(interfaceClass, concreteClass, new ExceptionIntercept());
+            ProxyObject = proxyResult;
         }
 
         public IEnumerable<DependencyInjectionInfo> ExtractDependencyInectionInfo(object objectWithDependencies)
         {
-            return ExtractDependencyInectionInfoByType(objectWithDependencies.GetType());
+            var dependencies = ExtractDependencyInectionInfoByType(objectWithDependencies.GetType());
+            var interfaceName = "IMainProgram"; //Get interface type from container
+            var interfaceType = objectWithDependencies.GetType().GetInterface(interfaceName);
+            dependencies.ToList().ForEach(x => Locator(interfaceType, objectWithDependencies, x.MethodName));
+            return dependencies;
         }
 
         private IEnumerable<DependencyInjectionInfo> ExtractDependencyInectionInfoByType(Type dependencyType)

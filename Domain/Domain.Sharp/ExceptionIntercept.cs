@@ -7,14 +7,22 @@ namespace Domain.Sharp
     {
         public void Intercept(IInvocation invocation)
         {
-            try
+            if (invocation.Method.IsDefined(typeof(CustomException), false))
+            {
+                try
+                {
+                    invocation.Proceed();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Caught Exception: {ex.Message}.");
+                }
+            }
+            else
             {
                 invocation.Proceed();
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Caught Exception: {ex.Message}.");
-            }
+            
         }
     }
 }

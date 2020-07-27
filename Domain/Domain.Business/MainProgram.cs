@@ -5,13 +5,8 @@ namespace Domain.Business
 {
     public class MainProgram : IMainProgram
     {
-        public void TestProgram()
-        {
-            RunCode(1);
-        }
-
         [CustomException]
-        public void RunCode(int parameterTest)
+        public void RunCode()
         {
             Console.WriteLine("test");
             //Throw an exception to test Interceptor
