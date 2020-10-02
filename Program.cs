@@ -2,6 +2,7 @@
 using Castle.DynamicProxy;
 using Domain.Business;
 using Domain.Sharp;
+using static Domain.Container.Container;
 
 namespace ConsoleApp1
 {
@@ -28,12 +29,5 @@ namespace ConsoleApp1
         }
     }
 
-    public class ProxyCreator<T>
-    {
-        public T GetProxyObject(object concreteClass)
-        {
-            var proxy = new ProxyGenerator();
-            return (T)proxy.CreateInterfaceProxyWithTarget(typeof(T), concreteClass, new ExceptionIntercept());
-        }
-    }
+    
 }

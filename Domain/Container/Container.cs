@@ -46,5 +46,14 @@ namespace Domain.Container
             });
         }
 
+        public class ProxyCreator<T>
+        {
+            public T GetProxyObject(object concreteClass)
+            {
+                var proxy = new ProxyGenerator();
+                return (T)proxy.CreateInterfaceProxyWithTarget(typeof(T), concreteClass, new ExceptionIntercept());
+            }
+        }
+
     }
 }
